@@ -4,24 +4,24 @@ using namespace std;
 
 int main()
 {
-    int aw/*kolumna w której stoi wieża*/,bw/*wiersz wieży*/,ap/*kolumna punktu*/,bp/*wiersz punktu*/;
-    cout<<"Kolumna wiezy:"; cin>>aw;
-    cout<<"Wiersz wiezy:"; cin>>bw;
-    cout<<"Kolumna punktu:"; cin>>ap;
-    cout<<"Wiersz punktu:"; cin>>bp;
+    int aw/*kolumna w ktorej stoi wieza*/,bw/*wiersz wiezy*/,ap/*kolumna punktu*/,bp/*wiersz punktu*/;
+    cout<<"Kolumna wiezy:"; cin>>aw;
+    cout<<"Wiersz wiezy:"; cin>>bw;
+    cout<<"Kolumna punktu:"; cin>>ap;
+    cout<<"Wiersz punktu:"; cin>>bp;
 
-    if(aw<1 || aw>8 ||bw<1 || bw>8 ||ap<1 || ap>8 ||bp<1 || bp>8)
-    {
-        cout<<"Kolumna wiezy:"; cin>>aw;
-        cout<<"Wiersz wiezy:"; cin>>bw;
-        cout<<"Kolumna punktu:"; cin>>ap;
-        cout<<"Wiersz punktu:"; cin>>bp;
-    }
-    if(aw!=ap && bw!=bp)
+    if(aw<1 || aw>8 ||bw<1 || bw>8 ||ap<1 || ap>8 ||bp<1 || bp>8)
+    {
+        cout<<"Kolumna wiezy:"; cin>>aw;
+        cout<<"Wiersz wiezy:"; cin>>bw;
+        cout<<"Kolumna punktu:"; cin>>ap;
+        cout<<"Wiersz punktu:"; cin>>bp;
+    }
+    if(aw!=ap && bw!=bp)
             {
 	               cout<<"NO";
             }
-     if(aw!=ap || bw!=bp)
+     else if(aw!=ap || bw!=bp)
             {
 	               if(aw!=ap)
 	               {
@@ -48,7 +48,7 @@ int main()
 	               		}
 	               	}
 	               }
-	               if(bw!=bp)
+	              else if(bw!=bp)
 	               {
 	               	if(aw>ap)
 	               	{
@@ -74,5 +74,9 @@ int main()
 	               	}
 	               }
             }
-    return 0;
+            if(aw==ap && bw==bp)
+            {
+	               cout<<"YES;
+            }
+    return 0;
 }
